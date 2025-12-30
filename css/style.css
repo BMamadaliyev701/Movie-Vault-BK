@@ -1,0 +1,72 @@
+/* Specialized Styles & Glassmorphism */
+:root {
+    --accent-color: #58a6ff;
+    --glass-bg: rgba(13, 17, 23, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --blur-val: 12px;
+}
+
+/* Custom Scrollbar Hide */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Filter Buttons Specialized States */
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--glass-border);
+    color: #8b949e;
+    padding: 12px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--accent-color);
+    color: #05070a;
+    border-color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+/* Loader Animation */
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: var(--accent-color);
+    border-radius: 50%;
+    animation: rotation 1s linear infinite;
+    margin: 100px auto;
+    grid-column: 1 / -1;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Header Fixes */
+@media (max-width: 768px) {
+    .filter-btn {
+        padding: 6px 15px;
+        font-size: 0.9rem;
+    }
+}
