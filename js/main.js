@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-// bu header qismi qidiruvga kirilganda va yoizilganda aftomatik izlanadi
-=======
->>>>>>> 1c2999b6b486e6c0385bcfab48be2dd02bde703b
+
+
 const Header = {
     init() {
         const searchInput = document.getElementById('searchInput');
@@ -49,11 +47,7 @@ const Filters = {
     },
 
     onFilterClick(dataset) {
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 1c2999b6b486e6c0385bcfab48be2dd02bde703b
     }
 };
 
@@ -260,11 +254,10 @@ const App = {
     async handleFilter(dataset) {
         const { category, genre } = dataset;
         this.showLoader();
-<<<<<<< HEAD
+
         Hero.toggle(true);
-=======
-        Hero.toggle(true); 
->>>>>>> 1c2999b6b486e6c0385bcfab48be2dd02bde703b
+        Hero.toggle(true);
+
         let contents = [];
 
         if (genre) {
@@ -287,11 +280,11 @@ const App = {
     },
 
     showFavorites() {
-<<<<<<< HEAD
+
         Hero.toggle(false);
-=======
-        Hero.toggle(false); 
->>>>>>> 1c2999b6b486e6c0385bcfab48be2dd02bde703b
+
+        Hero.toggle(false);
+
         const saved = Storage.get_favorites();
         this.renderMovies(saved, true);
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
