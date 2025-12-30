@@ -21,15 +21,16 @@ Movie Vault - bu premium darajadagi kino va seriallar olami. Foydalanuvchilar en
 
 ```text
 movie-vault-new/
-├── index.html          # Asosiy HTML sahifa va shablonlar
+├── index.html              # Asosiy HTML sahifa va shablonlar
 ├── css/
-│   └── style.css       # Konsolidatsiya qilingan barcha uslublar
+│   └── style.css           # Konsolidatsiya qilingan barcha uslublar
 ├── js/
-│   ├── config.js       # API kalitlari va konstantalar
-│   ├── api.js          # API bilan ishlash mantiqi
-│   ├── store.js        # Ma'lumotlarni saqlash (Storage)
-│   └── main.js         # Ilova asosiy mantiqi va renderlash
-└── assets/             # Rasmlar va ikonlar
+│   ├── config.js           # API kalitlari va konstantalar
+│   ├── api.js              # API bilan ishlash mantiqi
+│   ├── store.js            # Ma'lumotlarni saqlash (Storage)
+│   ├── main.js             # Ilova asosiy mantiqi va renderlash
+│   └── tailwind-config.js  # Tailwind uchun
+└── assets/                 # Rasmlar va ikonlar
     └── images/
         └── banner.png
 ```

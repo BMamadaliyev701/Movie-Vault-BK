@@ -1,5 +1,3 @@
-/** Movie Vault - Main Application Module */
-
 const Header = {
     init() {
         const searchInput = document.getElementById('searchInput');
@@ -45,7 +43,7 @@ const Filters = {
     },
 
     onFilterClick(dataset) {
-        // App logic will override this
+        
     }
 };
 
@@ -245,7 +243,7 @@ const App = {
     async handleFilter(dataset) {
         const { category, genre } = dataset;
         this.showLoader();
-        Hero.toggle(true); // Always show banner when changing category
+        Hero.toggle(true); 
         let contents = [];
 
         if (genre) {
@@ -268,7 +266,7 @@ const App = {
     },
 
     showFavorites() {
-        Hero.toggle(false); // Hide banner when viewing favorites
+        Hero.toggle(false); 
         const saved = Storage.get_favorites();
         this.renderMovies(saved, true);
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));

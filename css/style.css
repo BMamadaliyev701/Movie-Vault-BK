@@ -3,7 +3,7 @@ body {
 }
 :root {
     --accent-color: #58a6ff;
-    --glass-bg: rgba(13, 17, 23, 0.6);
+    --glass-bg: rgba(54, 92, 148, 0.6);
     --glass-border:rgba(255, 255, 255, 0.08);
     --blur-val: 12px;
 }
@@ -39,7 +39,7 @@ body {
 .filter-btn.active,
 .filter-btn:hover {
     background: var(--accent-color);
-    color: #05070a;
+    color: #041f47;
     border-color: var(--accent-color);
     transform: scale(1.1);
 }
