@@ -1,14 +1,17 @@
-/* Specialized Styles & Glassmorphism */
+body {
+    font-family: 'Montserrat', sans-serif !important
+}
 :root {
     --accent-color: #58a6ff;
-    --glass-bg: rgba(13, 17, 23, 0.6);
-    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-bg: rgba(54, 92, 148, 0.6);
+    --glass-border:rgba(255, 255, 255, 0.08);
     --blur-val: 12px;
 }
 
 /* Custom Scrollbar Hide */
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
+    
 }
 
 .scrollbar-hide {
@@ -29,14 +32,14 @@
     gap: 12px;
     font-size: 0.95rem;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     white-space: nowrap;
 }
 
 .filter-btn.active,
 .filter-btn:hover {
     background: var(--accent-color);
-    color: #05070a;
+    color: #041f47;
     border-color: var(--accent-color);
     transform: scale(1.1);
 }
