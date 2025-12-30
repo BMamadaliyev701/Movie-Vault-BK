@@ -1,5 +1,4 @@
-/** Movie Vault - Main Application Module */
-
+// bu header qismi qidiruvga kirilganda va yoizilganda aftomatik izlanadi
 const Header = {
     init() {
         const searchInput = document.getElementById('searchInput');
@@ -22,6 +21,7 @@ const Header = {
     onFavoritesClick() { }
 };
 
+// banner qismi qidiruvga kirilganda banner yoqoladi keyin qidiruvdan chiqandan song banner qaytadi
 const Hero = {
     toggle(show) {
         const banner = document.getElementById('heroBanner');
@@ -32,6 +32,7 @@ const Hero = {
     }
 };
 
+// bu filter qismi turkumlarni bosganda ishlaydi va tegishli turkumga mos ravishda filtrlashni amalga oshiradi
 const Filters = {
     init() {
         const filterBtns = document.querySelectorAll('.filter-btn');
@@ -45,10 +46,12 @@ const Filters = {
     },
 
     onFilterClick(dataset) {
-        // App logic will override this
+
     }
 };
 
+// bu movie card qismi har bir film kartasini yaratadi va modal oynani boshqaradi
+// HTML template dan foydalanib, har bir kino uchun alohida kichik blok (rasm, sarlavha, reyting) yasab beradi.
 const MovieCard = {
     render(movie) {
         const template = document.getElementById('movie-card-template');
@@ -80,6 +83,8 @@ const MovieCard = {
     }
 };
 
+
+// Barcha yasalgan kartochkalarni bitta joyga (setkaga) yig'adi
 const MovieGrid = {
     render(movies, isFavorites = false) {
         if (isFavorites && movies.length === 0) {
@@ -128,6 +133,7 @@ const MovieGrid = {
     }
 };
 
+// kino haqida modal oynani boshqaradi
 const MovieModal = {
     renderBody(movie) {
         const template = document.getElementById('movie-modal-template');
@@ -180,6 +186,8 @@ const MovieModal = {
     }
 };
 
+
+// bu tepadagi barcha qismlarni birlashtiradi va birinchi eng omaviy kino yuklaydi
 const App = {
     current_media_type: 'movie',
     current_category: 'popular',
@@ -245,7 +253,7 @@ const App = {
     async handleFilter(dataset) {
         const { category, genre } = dataset;
         this.showLoader();
-        Hero.toggle(true); // Always show banner when changing category
+        Hero.toggle(true);
         let contents = [];
 
         if (genre) {
@@ -268,7 +276,7 @@ const App = {
     },
 
     showFavorites() {
-        Hero.toggle(false); // Hide banner when viewing favorites
+        Hero.toggle(false);
         const saved = Storage.get_favorites();
         this.renderMovies(saved, true);
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
