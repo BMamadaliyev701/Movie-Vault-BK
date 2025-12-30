@@ -2,245 +2,228 @@
 <html lang="uz">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Vault</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/tailwind-config.js"></script>
-    <link rel="icon" type="image/png" href="./assets/images/film-strip.png ">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="icon" type="image/png" href="./assets/images/ikonka.jpg">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie Vault</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/tailwind-config.js"></script>
+        <link rel="icon" type="image/png" href="./assets/images/film-strip.png ">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+                rel="stylesheet">
+        <link rel="icon" type="image/png" href="./assets/images/ikonka.jpg">
 
 </head>
 
 <body class="bg-[#0E102A] text-[#f0f6fc] min-h-screen">
-    <div id="app" class="app-container max-w-[1400px] mx-auto px-4 md:px-[60px] pb-10">
-        <!-- Header -->
-        <header class="flex flex-wrap justify-between items-center py-5 mb-8 gap-5">
-            <div class="logo flex items-center gap-3">
-                <i class="fa-solid fa-film text-[1.8rem] text-accent"></i>
-                <h1 class="text-[1.8rem] font-bold tracking-[2px]">MOVIE <span
-                        class="text-accent font-light">VAULT</span></h1>
-            </div>
-            <div class="header-actions">
-                <button id="favoritesBtn" title="Saqlanganlar"
-                    class="bg-white/5 border border-white/10 text-[#f0f6fc] px-5 py-2.5 rounded-xl cursor-pointer flex items-center gap-2.5 transition-all duration-500 hover:scale-105 active:scale-95 backdrop-blur-[12px]">
-                    <i class="fa-regular fa-heart"></i>
-                    <span class="btn-text hidden sm:inline">Saqlanganlar</span>
-                </button>
-            </div>
-            <div class="search-bar relative flex-1 basis-full md:basis-auto">
-                <i
-                    class="fa fa-search absolute left-[15px] top-1/2 -translate-y-1/2 text-text-secondary pointer-events-none"></i>
-                <input type="text" id="searchInput" placeholder="Qidirish..."
-                    class="w-full bg-white/5 border border-white/10 px-11 py-3 rounded-xl text-[#f0f6fc] outline-none transition-all duration-300 focus:border-accent focus:shadow-[0_0_10px_rgba(88,166,255,0.2)] backdrop-blur-[12px]">
-                <button id="searchBtn" title="Izlash"
-                    class="absolute right-[5px] top-[5px] bottom-[5px] w-11 bg-accent text-bg-dark border-none rounded-lg cursor-pointer flex items-center justify-center transition-all duration-300 hover:scale-105 hover:brightness-110">
-                    <i class="fa fa-search"></i>
-                </button>
-            </div>
-        </header>
+        <div id="app" class="app-container max-w-[1400px] mx-auto px-4 md:px-[60px] pb-10">
+                <!-- Header -->
+                <header class="flex flex-wrap justify-between items-center py-5 mb-8 gap-5">
+                        <div class="logo flex items-center gap-3">
+                                <i class="fa-solid fa-film text-[1.8rem] text-accent"></i>
+                                <h1 class="text-[1.8rem] font-bold tracking-[2px]">MOVIE <span
+                                                class="text-accent font-light">VAULT</span></h1>
+                        </div>
+                        <div class="header-actions flex gap-3">
+                                <button id="favoritesBtn" title="Saqlanganlar"
+                                        class="bg-white/5 border border-white/10 text-[#f0f6fc] px-5 py-2.5 rounded-xl cursor-pointer flex items-center gap-2.5 transition-all duration-500 hover:scale-105 active:scale-95 backdrop-blur-[12px]">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <span class="btn-text hidden sm:inline">Saqlanganlar</span>
+                                </button>
+                                <button id="signupBtn" title="Ro'yxatdan o'tish"
+                                        class="bg-accent text-bg-dark px-5 py-2.5 rounded-xl font-bold cursor-pointer transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(88,166,255,0.3)]">
+                                        <i class="fa-solid fa-user-plus"></i>
+                                        <span class="btn-text hidden sm:inline">Ro'yxatdan o'tish</span>
+                                </button>
+                        </div>
+                        <div class="search-bar relative flex-1 basis-full md:basis-auto">
+                                <i
+                                        class="fa fa-search absolute left-[15px] top-1/2 -translate-y-1/2 text-text-secondary pointer-events-none"></i>
+                                <input type="text" id="searchInput" placeholder="Qidirish..."
+                                        class="w-full bg-white/5 border border-white/10 px-11 py-3 rounded-xl text-[#f0f6fc] outline-none transition-all duration-300 focus:border-accent focus:shadow-[0_0_10px_rgba(88,166,255,0.2)] backdrop-blur-[12px]">
+                                <button id="searchBtn" title="Izlash"
+                                        class="absolute right-[5px] top-[5px] bottom-[5px] w-11 bg-accent text-bg-dark border-none rounded-lg cursor-pointer flex items-center justify-center transition-all duration-300 hover:scale-105 hover:brightness-110">
+                                        <i class="fa fa-search"></i>
+                                </button>
+                        </div>
+                </header>
 
-        <main class="pt-5">
-            <!-- Hero Banner -->
-            <section id="heroBanner"
-                class="hero-banner w-full mb-10 bg-card-bg rounded-[20px] border border-white/10 backdrop-blur-[5px] transition-all duration-500 overflow-hidden">
+                <main class="pt-5">
+                        <!-- Hero Banner -->
+                        <section id="heroBanner"
+                                class="hero-banner w-full mb-10 bg-card-bg rounded-[20px] border border-white/10 backdrop-blur-[5px] transition-all duration-500 overflow-hidden">
+                                <div
+                                        class="banner-container flex flex-col md:flex-row-reverse items-center p-5 md:p-10 gap-5 md:gap-10 w-full text-center md:text-left">
+                                        <div class="banner-image flex-1 flex justify-center items-center">
+                                                <img src="./assets/images/banner.jpg" alt="Banner"
+                                                        class="w-full max-w-[500px] rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] object-contain">
+                                        </div>
+                                        <div class="banner-content flex-1">
+                                                <h2
+                                                        class="text-3xl md:text-[2.5rem] mb-2 text-[#f0f6fc] [text-shadow:0_2px_10px_rgba(0,0,0,0.5)]">
+                                                        Movie Vault - Premium Kino Olami</h2>
+                                                <p class="text-lg text-text-secondary max-w-[500px] mx-auto md:mx-0">Eng
+                                                        sara kinolar, seriallar
+                                                        va multfilmlar to'plami bir joyda!</p>
+                                        </div>
+                                </div>
+                        </section>
+
+                        <!-- Filters -->
+                        <div class="filters flex gap-[15px] mb-10 overflow-x-auto py-2.5 px-1 scrollbar-hide">
+                                <button class="filter-btn active" data-category="movie" title="Kino">
+                                        <i class="fa-solid fa-clapperboard"></i>
+                                        <span class="btn-text">Kino</span>
+                                </button>
+                                <button class="filter-btn" data-category="tv" title="Serial">
+                                        <i class="fa-solid fa-tv"></i>
+                                        <span class="btn-text">Serial</span>
+                                </button>
+                                <button class="filter-btn" data-genre="16" title="Multfilm">
+                                        <i class="fa-solid fa-child"></i>
+                                        <span class="btn-text">Multfilm</span>
+                                </button>
+                                <button class="filter-btn" data-genre="878" title="Fantastika">
+                                        <i class="fa-solid fa-atom"></i>
+                                        <span class="btn-text">Fantastika</span>
+                                </button>
+                                <button class="filter-btn" data-genre="27" title="Qo'rqinchli">
+                                        <i class="fa-solid fa-ghost"></i>
+                                        <span class="btn-text">Qo'rqinchli</span>
+                                </button>
+                                <button class="filter-btn" data-category="trending" title="Trenddagilar">
+                                        <i class="fa-solid fa-fire"></i>
+                                        <span class="btn-text">Trenddagilar</span>
+                                </button>
+                                <button class="filter-btn" data-category="game" title="O'yin">
+                                        <i class="fa-solid fa-gamepad"></i>
+                                        <span class="btn-text">O'yin</span>
+                                </button>
+                        </div>
+
+                        <!-- Movie Grid -->
+                        <section id="movieGrid"
+                                class="movie-grid grid grid-cols-2 md:grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-[15px] md:gap-[30px]">
+                        </section>
+                </main>
+
+                <!-- Footer -->
+                <footer
+                        class="footer bg-glass-bg backdrop-blur-[15px] border border-white/10 shadow-premium mt-[60px] py-10 rounded-t-[30px] text-center">
+                        <div class="footer-content flex flex-col items-center gap-5">
+                                <div class="footer-logo flex items-center gap-2.5">
+                                        <i class="fa-solid fa-film text-[1.5rem] text-accent"></i>
+                                        <h2 class="text-[1.5rem] font-bold tracking-[1px]">MOVIE <span
+                                                        class="text-accent font-light">VAULT</span></h2>
+                                </div>
+                                <p class="text-text-secondary">&copy; 2025 Movie Vault. Barcha huquqlar himoyalangan.
+                                </p>
+                                <div class="social-links flex gap-5">
+                                        <a href="https://web.telegram.org/" target="_blank"
+                                                class="text-text-secondary text-[1.5rem] hover:text-accent transition-colors duration-300"><i
+                                                        class="fa-brands fa-telegram"></i></a>
+                                        <a href="https://www.instagram.com/accounts/onetap/?next=%2F" target="_blank"
+                                                class="text-text-secondary text-[1.5rem] hover:text-accent transition-colors duration-300"><i
+                                                        class="fa-brands fa-instagram"></i></a>
+                                        <a href="https://www.youtube.com/" target="_blank"
+                                                class="text-text-secondary text-[1.5rem] hover:text-accent transition-colors duration-300"><i
+                                                        class="fa-brands fa-youtube"></i></a>
+                                </div>
+                        </div>
+                </footer>
+        </div>
+
+        <!-- Loader -->
+        <div id="loader" class="loader" style="display: none;"></div>
+
+        <!-- Modal Skeleton -->
+        <div id="movieModal"
+                class="modal hidden fixed inset-0 z-[1000] bg-black/90 backdrop-blur-[8px] flex items-center justify-center p-4">
                 <div
-                    class="banner-container flex flex-col md:flex-row-reverse items-center p-5 md:p-10 gap-5 md:gap-10 w-full text-center md:text-left">
-                    <div class="banner-image flex-1 flex justify-center items-center">
-                        <img src="./assets/images/banner.jpg" alt="Banner"
-                            class="w-full max-w-[500px] rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] object-contain">
-                    </div>
-                    <div class="banner-content flex-1">
-                        <h2
-                            class="text-3xl md:text-[2.5rem] mb-2 text-[#f0f6fc] [text-shadow:0_2px_10px_rgba(0,0,0,0.5)]">
-                            Movie Vault - Premium Kino Olami</h2>
-                        <p class="text-lg text-text-secondary max-w-[500px] mx-auto md:mx-0">Eng sara kinolar, seriallar
-                            va multfilmlar to'plami bir joyda!</p>
-                    </div>
+                        class="modal-content relative w-[95%] md:w-[80%] max-w-[900px] rounded-[20px] bg-[#1a1d23] border border-white/10 shadow-2xl text-[#f0f6fc] overflow-hidden">
+                        <span
+                                class="close-modal absolute top-4 right-5 text-gray-400 text-3xl font-bold cursor-pointer hover:text-white z-50 transition-colors">
+                                &times;
+                        </span>
+                        <div id="modalBody"
+                                class="modal-body flex flex-col md:flex-row items-center md:items-start gap-6 p-6 md:p-10">
+                        </div>
                 </div>
-            </section>
+        </div>
 
-            <!-- Filters -->
-            <div class="filters flex gap-[15px] mb-10 overflow-x-auto py-2.5 px-1 scrollbar-hide">
-                <button class="filter-btn active" data-category="movie" title="Kino">
-                    <i class="fa-solid fa-clapperboard"></i>
-                    <span class="btn-text">Kino</span>
-                </button>
-                <button class="filter-btn" data-category="tv" title="Serial">
-                    <i class="fa-solid fa-tv"></i>
-                    <span class="btn-text">Serial</span>
-                </button>
-                <button class="filter-btn" data-genre="16" title="Multfilm">
-                    <i class="fa-solid fa-child"></i>
-                    <span class="btn-text">Multfilm</span>
-                </button>
-                <button class="filter-btn" data-genre="878" title="Fantastika">
-                    <i class="fa-solid fa-atom"></i>
-                    <span class="btn-text">Fantastika</span>
-                </button>
-                <button class="filter-btn" data-genre="27" title="Qo'rqinchli">
-                    <i class="fa-solid fa-ghost"></i>
-                    <span class="btn-text">Qo'rqinchli</span>
-                </button>
-                <button class="filter-btn" data-category="trending" title="Trenddagilar">
-                    <i class="fa-solid fa-fire"></i>
-                    <span class="btn-text">Trenddagilar</span>
-                </button>
-                <button class="filter-btn" data-category="game" title="O'yin">
-                    <i class="fa-solid fa-gamepad"></i>
-                    <span class="btn-text">O'yin</span>
-                </button>
-            </div>
-
-            <!-- Movie Grid -->
-            <section id="movieGrid"
-                class="movie-grid grid grid-cols-2 md:grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-[15px] md:gap-[30px]">
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer
-            class="footer bg-glass-bg backdrop-blur-[15px] border border-white/10 shadow-premium mt-[60px] py-10 rounded-t-[30px] text-center">
-            <div class="footer-content flex flex-col items-center gap-5">
-                <div class="footer-logo flex items-center gap-2.5">
-                    <i class="fa-solid fa-film text-[1.5rem] text-accent"></i>
-                    <h2 class="text-[1.5rem] font-bold tracking-[1px]">MOVIE <span
-                            class="text-accent font-light">VAULT</span></h2>
+        <!-- Templates -->
+        <template id="movie-card-template">
+                <div
+                        class="movie-card bg-[#1a1d23] rounded-2xl overflow-hidden relative cursor-pointer transition-all duration-500 border border-white/10 backdrop-blur-[12px] hover:-translate-y-2.5 hover:scale-[1.02] hover:shadow-[0_25px_50px_rgba(0,0,0,0.7)] hover:border-white/20">
+                        <img src="" alt="" class="movie-poster w-full aspect-[2/3] object-cover" loading="lazy">
+                        <div
+                                class="info-icon absolute top-[15px] left-[15px] w-[35px] h-[35px] rounded-full bg-white/10 border border-white/20 flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-[#58a6ff] hover:text-[#0E102A] hover:rotate-[360deg] z-[5] backdrop-blur-[5px]">
+                                <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                        <div
+                                class="fav-icon absolute top-[15px] right-[15px] w-[35px] h-[35px] rounded-full bg-black/40 border border-white/10 flex items-center justify-center transition-all duration-300 backdrop-blur-[5px] text-white/80 hover:scale-110 active:scale-90">
+                                <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="movie-info p-5">
+                                <h3 class="movie-title text-base font-semibold mb-2 w-full truncate text-[#f0f6fc]">
+                                </h3>
+                                <div class="movie-meta flex justify-between items-center text-[#8b949e] text-[0.85rem]">
+                                        <span class="year font-medium"></span>
+                                        <span class="rating text-[#58a6ff] flex items-center gap-[5px] font-bold">
+                                                <i class="fa fa-star"></i>
+                                                <span></span>
+                                        </span>
+                                </div>
+                        </div>
                 </div>
-                <p class="text-text-secondary">&copy; 2025 Movie Vault. Barcha huquqlar himoyalangan.</p>
-                <div class="social-links flex gap-5">
-                    <a href="https://web.telegram.org/" target="_blank"
-                        class="text-text-secondary text-[1.5rem] hover:text-accent transition-colors duration-300"><i
-                            class="fa-brands fa-telegram"></i></a>
-                    <a href="https://www.instagram.com/accounts/onetap/?next=%2F" target="_blank"
-                        class="text-text-secondary text-[1.5rem] hover:text-accent transition-colors duration-300"><i
-                            class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/" target="_blank"
-                        class="text-text-secondary text-[1.5rem] hover:text-accent transition-colors duration-300"><i
-                            class="fa-brands fa-youtube"></i></a>
+        </template>
+
+        <template id="movie-modal-template">
+                <img src="" alt=""
+                        class="modal-poster w-full max-w-[200px] md:max-w-[300px] rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                <div class="modal-details flex-1">
+                        <h2 class="text-2xl md:text-[2.5rem] mb-[10px] capitalize text-center md:text-left"></h2>
+                        <div
+                                class="modal-meta flex justify-center md:justify-start gap-5 mb-5 text-[#8b949e] flex-wrap">
+                                <span class="modal-year"></span>
+                                <span class="rating text-[#ffca28] flex items-center gap-[5px]"><i
+                                                class="fa fa-star"></i>
+                                        <span></span>/10</span>
+                        </div>
+                        <div class="modal-plot">
+                                <h3 class="text-lg font-semibold mb-2">Syujet:</h3>
+                                <p class="modal-overview text-lg leading-[1.6] mb-[30px] line-clamp-5"></p>
+                        </div>
+                        <div class="modal-actions flex flex-col sm:flex-row gap-[15px]">
+                                <button class="btn-primary flex-1 bg-[#58a6ff] text-[#0E102A] py-3 px-[30px] rounded-xl font-bold cursor-pointer transition-all hover:scale-105"
+                                        id="watchBtn">Hozir ko'rish</button>
+                                <button
+                                        class="btn-secondary flex-1 bg-transparent border border-white/10 text-[#f0f6fc] py-3 px-[30px] rounded-xl font-semibold cursor-pointer transition-all hover:bg-white/5 active:scale-95 toggle-fav">Saqlash</button>
+                        </div>
                 </div>
-            </div>
-        </footer>
-    </div>
+        </template>
 
-    <!-- Loader -->
-    <div id="loader" class="loader" style="display: none;"></div>
+        <template id="empty-favorites-template">
+                <div class="empty-state grid col-span-full text-center py-[100px] px-5 text-[#8b949e]">
+                        <i class="fa-regular fa-heart text-[4rem] mb-5 opacity-30"></i>
+                        <p class="text-[1.2rem]">Hali sevimlilar yo'q. Kinolarni saqlab qo'ying!</p>
+                </div>
+        </template>
 
-    <!-- Modal Skeleton -->
-    <div id="movieModal" class="modal hidden fixed inset-0 z-[1000] bg-black/90 backdrop-blur-[8px]" class="absolute right-[5px] top-[5px] bottom-[5px] w-11 bg-accent text-bg-dark border-none rounded-lg
-        cursor-pointer flex items-center justify-center transition-all duration-300 hover:scale-105
-        hover:brightness-110">
-        <i class="fa fa-search"></i>
-        </button>
-    </div>
-    </header>
+        <template id="no-results-template">
+                <p class="no-results text-center py-[50px] col-span-full text-[#8b949e] text-lg">Hech narsa topilmadi.
+                        Qayta urinib ko'ring.</p>
+        </template>
 
-
-    <!-- Movie Grid -->
-    <section id="movieGrid"
-        class="movie-grid grid grid-cols-2 md:grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-[15px] md:gap-[30px]">
-    </section>
-    </main>
-
-    </div>
-
-    <!-- Loader -->
-    <div id="loader" class="loader" style="display: none;"></div>
-
-    <!-- Modal Skeleton -->
-    <div id="movieModal"
-        class="modal hidden fixed inset-0 z-[1000] bg-black/90 backdrop-blur-[8px] flex items-center justify-center p-4">
-
-        <div
-            class="modal-content relative w-[95%] md:w-[80%] max-w-[900px] rounded-[20px] bg-[#1a1d23] border border-white/10 shadow-2xl text-[#f0f6fc] overflow-hidden">
-
-            <span
-                class="close-modal absolute top-4 right-5 text-gray-400 text-3xl font-bold cursor-pointer hover:text-white z-50 transition-colors">
-                &times;
-            </span>
-
-            <div id="modalBody"
-                class="modal-body flex flex-col md:flex-row items-center md:items-start gap-6 p-6 md:p-10">
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Templates -->
-    <template id="movie-modal-template">
-        <img src="" alt=""
-            class="modal-poster w-full max-w-[200px] md:max-w-[300px] rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
-        <div class="modal-details flex-1">
-            <h2 class="text-2xl md:text-[2.5rem] mb-[10px] capitalize text-center md:text-left"></h2>
-            <div class="modal-meta flex justify-center md:justify-start gap-5 mb-5 text-text-secondary flex-wrap">
-                <span class="modal-year"></span>
-                <span class="rating text-[#ffca28] flex items-center gap-[5px]"><i class="fa fa-star"></i>
-                    <span></span>/10</span>
-            </div>
-            <div class="modal-plot">
-                <h3 class="text-lg font-semibold mb-2">Syujet:</h3>
-                <p class="modal-overview text-lg leading-[1.6] mb-[30px] line-clamp-5"></p>
-            </div>
-            <div class="modal-actions flex flex-col sm:flex-row gap-[15px]">
-                <button
-                    class="btn-primary flex-1 bg-accent text-bg-dark py-3 px-[30px] rounded-xl font-bold cursor-pointer transition-all hover:scale-105"
-                    id="watchBtn">Hozir ko'rish</button>
-                <button
-                    class="btn-secondary flex-1 bg-transparent border border-white/10 text-[#f0f6fc] py-3 px-[30px] rounded-xl font-semibold cursor-pointer transition-all hover:bg-white/5 active:scale-95 toggle-fav">Saqlash</button>
-            </div>
-        </div>
-    </template>
-
-    <template id="movie-modal-template">
-        <img src="" alt=""
-            class="modal-poster w-full max-w-[200px] md:max-w-[300px] rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
-        <div class="modal-details flex-1">
-            <h2 class="text-2xl md:text-[2.5rem] mb-[10px] capitalize text-center md:text-left"></h2>
-            <div class="modal-meta flex justify-center md:justify-start gap-5 mb-5 text-text-secondary flex-wrap">
-                <span class="modal-year"></span>
-                <span class="rating text-[#ffca28] flex items-center gap-[5px]"><i class="fa fa-star"></i>
-                    <span></span>/10</span>
-            </div>
-            <div class="modal-plot">
-                <h3 class="text-lg font-semibold mb-2">Syujet:</h3>
-                <p class="modal-overview text-lg leading-[1.6] mb-[30px] line-clamp-5"></p>
-            </div>
-            <div class="modal-actions flex flex-col sm:flex-row gap-[15px]">
-                <button
-                    class="btn-primary flex-1 bg-accent text-bg-dark py-3 px-[30px] rounded-xl font-bold cursor-pointer transition-all hover:scale-105"
-                    id="watchBtn">Hozir ko'rish</button>
-                <button
-                    class="btn-secondary flex-1 bg-transparent border border-white/10 text-[#f0f6fc] py-3 px-[30px] rounded-xl font-semibold cursor-pointer transition-all hover:bg-white/5 active:scale-95 toggle-fav">Saqlash</button>
-            </div>
-        </div>
-    </template>
-
-    <template id="empty-favorites-template">
-        <div class="empty-state grid col-span-full text-center py-[100px] px-5 text-text-secondary">
-            <i class="fa-regular fa-heart text-[4rem] mb-5 opacity-30"></i>
-            <p class="text-[1.2rem]">Hali sevimlilar yo'q. Kinolarni saqlab qo'ying!</p>
-        </div>
-    </template>
-
-    <template id="no-results-template">
-        <p class="no-results text-center py-[50px] col-span-full text-text-secondary text-lg">Hech narsa topilmadi.
-            Qayta
-            urinib ko'ring.
-        </p>
-    </template>
-
-    <!-- Scripts -->
-    <script src="js/config.js"></script>
-    <script src="js/store.js"></script>
-    <script src="js/api.js"></script>
-    <script src="js/main.js"></script>
+        <!-- Scripts -->
+        <script src="js/config.js"></script>
+        <script src="js/store.js"></script>
+        <script src="js/api.js"></script>
+        <script src="js/main.js"></script>
 </body>
 
 </html>

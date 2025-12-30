@@ -1,75 +1,75 @@
 body {
-    font-family: 'Montserrat', sans-serif !important
+        font-family: 'Montserrat', sans-serif !important
 }
 :root {
-    --accent-color: #58a6ff;
-    --glass-bg: rgba(54, 92, 148, 0.6);
-    --glass-border:rgba(255, 255, 255, 0.08);
-    --blur-val: 12px;
+        --accent-color: #58a6ff;
+        --glass-bg: rgba(54, 92, 148, 0.6);
+        --glass-border:rgba(255, 255, 255, 0.08);
+        --blur-val: 12px;
 }
 
 /* Custom Scrollbar Hide */
 .scrollbar-hide::-webkit-scrollbar {
-    display: none;
+        display: none;
     
 }
 
 .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
 }
 
 /* Filter Buttons Specialized States */
 .filter-btn {
-    background: transparent;
-    border: 1px solid var(--glass-border);
-    color: #8b949e;
-    padding: 12px 24px;
-    border-radius: 30px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    transition: all 0.4s ease;
-    white-space: nowrap;
+        background: transparent;
+        border: 1px solid var(--glass-border);
+        color: #8b949e;
+        padding: 12px 24px;
+        border-radius: 30px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        transition: all 0.4s ease;
+        white-space: nowrap;
 }
 
 .filter-btn.active,
 .filter-btn:hover {
-    background: var(--accent-color);
-    color: #041f47;
-    border-color: var(--accent-color);
-    transform: scale(1.1);
+        background: var(--accent-color);
+        color: #041f47;
+        border-color: var(--accent-color);
+        transform: scale(1.1);
 }
 
 /* Loader Animation */
 .loader {
-    width: 48px;
-    height: 48px;
-    border: 5px solid #FFF;
-    border-bottom-color: var(--accent-color);
-    border-radius: 50%;
-    animation: rotation 1s linear infinite;
-    margin: 100px auto;
-    grid-column: 1 / -1;
+        width: 48px;
+        height: 48px;
+        border: 5px solid #FFF;
+        border-bottom-color: var(--accent-color);
+        border-radius: 50%;
+        animation: rotation 1s linear infinite;
+        margin: 100px auto;
+        grid-column: 1 / -1;
 }
 
 @keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
+        0% {
+                transform: rotate(0deg);
+        }
 
-    100% {
-        transform: rotate(360deg);
-    }
+        100% {
+                transform: rotate(360deg);
+        }
 }
 
 /* Responsive Header Fixes */
 @media (max-width: 768px) {
-    .filter-btn {
-        padding: 6px 15px;
-        font-size: 0.9rem;
-    }
+        .filter-btn {
+                padding: 6px 15px;
+                font-size: 0.9rem;
+        }
 }
